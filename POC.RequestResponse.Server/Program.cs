@@ -8,8 +8,8 @@ IHost host = Host.CreateDefaultBuilder(args)
     {
         services.AddMassTransit(x =>
         {
-            ConfigureRabbitmq(x);
             x.AddConsumer<OrderConsumer>();
+            ConfigureRabbitmq(x);
         });
 
     })
